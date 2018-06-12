@@ -1,0 +1,16 @@
+dotnet new sln -o FSharpDemo
+cd .\FSharpDemo\
+dotnet new lib -lang F# -o src/Library
+    *** COPY LIBRARY CODE ***
+dotnet add src/Library/Library.fsproj package Newtonsoft.Json
+dotnet sln add src/Library/Library.fsproj
+dotnet restore
+dotnet new console -lang F# -o src/App
+    *** COPY APP CODE ***
+dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
+dotnet sln add src/App/App.fsproj
+dotnet build
+dotnet run My Arguments
+    *** ALT + ENTER = evaluate multiline ***
+    *** ALT + / = evaluate one line ***
+    *** TYPE #quit;; to leave the console ***
