@@ -1,13 +1,15 @@
-﻿open System
-open Library
+﻿namespace DemoApp
 
-[<EntryPoint>]
-let main argv =
-    printfn "Nice command-line arguments! Here's what JSON.NET has to say about them:"
+open DemoLib
 
-    argv
-    |> Array.map getJsonNetJson
-    |> Array.iter (printfn "%s")
+module App = 
+    [<EntryPoint>]
+    let main argv =
+        printfn "Nice command-line arguments! Here's what JSON.NET has to say about them:"
 
-    0 // return an integer exit code
+        argv
+        |> Array.map Library.getJsonNetJson
+        |> Array.iter (printfn "%s")
+
+        0 // return an integer exit code
     
