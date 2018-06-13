@@ -3,6 +3,7 @@ namespace FunctionalSystem
 open System
 open System.Globalization
 
+// 2.
 module PartialFunctions = 
     let add x y =
         x + y
