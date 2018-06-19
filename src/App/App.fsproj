@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Library\Library.fsproj" />
+    <ProjectReference Include="..\FunctionalSystem\FunctionalSystem.fsproj" />
   </ItemGroup>
 
 </Project>

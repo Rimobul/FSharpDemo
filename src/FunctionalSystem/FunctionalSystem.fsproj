@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <Compile Include="DependencyInjection.fs" />
+    <Compile Include="FunctionComposition.fs" />
+    <Compile Include="PartialFunctions.fs" />
+    <Compile Include="StateMachine.fs" />
+    <Compile Include="Car.fs" />
   </ItemGroup>
 
 </Project>

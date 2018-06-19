@@ -1,0 +1,27 @@
+1. go through 2 and 3
+2. start implementing checking account, but with validation
+3. openCheckingAccount application -> checkingAccount
+
+
+let openCheckingAccount 
+    (application: Application)
+    (id: Identification * Identification)
+    (deposit: Deposit) =
+        if deposit >= 500M
+            then Some CheckingAccount
+            else None
+
+type DifferentIds = private | PrivateIds of Identification * Identification
+
+let makeDifferentIds (id1: Identification) (id2: Identification) =
+    match (id1, id2) with
+    | (DriverLicense _), (DriverLicense _)
+        -> None
+    | (SSNCard _), (SSNCard _)
+        -> None
+    | (MilitaryId _), (MilitaryId _)
+        -> None
+    | (Passport _), (Passport _)
+        -> None
+    | _
+        -> Some (PrivateIds (id1, id2))

@@ -1,6 +1,7 @@
 ﻿namespace DemoApp
 
 open DemoLib
+open FunctionalSystem
 
 module App = 
     [<EntryPoint>]
@@ -10,6 +11,10 @@ module App =
         argv
         |> Array.map Library.getJsonNetJson
         |> Array.iter (printfn "%s")
+
+        printfn "Calling a car"
+        Car.getCar()
+
 
         0 // return an integer exit code
     
