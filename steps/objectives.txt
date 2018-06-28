@@ -1,0 +1,30 @@
+1. Create function "startProject" which creates a new Project.
+2. To create a new project, we need a project name, two technologies, a team and a budget.
+3. Technologies, team and budget need to be valid in order to provide a project.
+4. Budget must be at least 100000 CZK.
+5. A team consists of at least two SDE employees. 
+6. An SDE empployee is recognized by his/her full name, email and position.
+7. Both the full name and email of an SDE employee can be determined from their first and last names.
+8. The full name of an SDE employee is the combination: first name + space + last name.
+9. The email of an SDE employee takes the form: first name + dot + last name + at sde dot cz.
+10. Every SDE employee in a team can be either a developer, a QA or a scrum master.
+11. Each team must have at least one developer and one QA.
+---
+12. SDE specializes in the following technologies: web, mobile, IoT and backend development.
+13. A project must always have two DIFFERENT technologies.
+14. The only exception to previous rule is the combination of two mobile technologies.
+15. The output project will have its name, list of requirements and list of bugs. 
+16. It will also contain information about its initial budget, technologies and team.
+17. Create a state machine which describes the individual steps in project lifecycle.
+18. We start without a project. If sales manages to get a new contract, we start pre-project estimations.
+19. If the pre-project discussion fails, we have no project.
+20. If the pre-project discussion ends in an agreement, we start developing a new project.
+21. The development may include adding new features or fixing bugs. The bug fixes are usually rare.
+22. After successful completion and deployment of the project, we are again without a project and the cycle can start anew.
+23. Prevent the state machine from providing invalid state transitions.
+24. Add allowed functionality to individual states and transitions.
+25. During the estimations phase, we should be able to add and remove team members.
+26. Just before ending the estimations, we should validate the team, technologies and budget.
+27. Based on the validation result, we either have and agreement, or a failed project.
+28. During development we can add new features, report new bugs, complete features and fix bugs.
+29. Before deploying a project, there can be no incomplete features and at most 2 unresolved bugs.
